@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div>
+    <h2 style="text-align: center;">Home Page</h2>
+    {% for i in posts %}
+    <div class="card bg-light shadow p-3 mt-5">
+        <h1 class="text-primary">{{i.title}}</h1>
+        <p>{{i.description}}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content%}
